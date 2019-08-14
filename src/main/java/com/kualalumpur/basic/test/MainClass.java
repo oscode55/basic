@@ -16,8 +16,11 @@ import java.util.List;
 public class MainClass {
     //FTP上传文件集合
     private static void testFtpUpload(){
-        File file = new File("test.txt");
-        File file2 = new File("test2.txt");
+        String fileName1 = MainClass.class.getResource("/static/test.txt").getFile();
+        String fileName2 = MainClass.class.getResource("/static/test2.txt").getFile();
+
+        File file = new File(fileName1);
+        File file2 = new File(fileName2);
         List<File> fileList =  new ArrayList<File>();
         fileList.add(file);
         fileList.add(file2);
@@ -26,11 +29,10 @@ public class MainClass {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
     public static void main(String[] args) {
 //        log.info( PropertiesUtil.getProperty("ftp.server.http.prefix") );//测试Properties
-//        testFtpUpload();//测试FTP上传
-        String fileName = "gui/MainGui.fxml";
-        System.out.println(fileName);
+        testFtpUpload();//测试FTP上传
     }
 }

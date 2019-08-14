@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  * @Author KualaLumpur
  * @Date 2019/8/14 1:24
  **/
-public class MainGuiAPP extends Application {
+public class MainGuiApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
